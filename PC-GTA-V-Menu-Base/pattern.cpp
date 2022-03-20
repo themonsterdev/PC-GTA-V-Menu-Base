@@ -15,8 +15,6 @@ VOID InitPattern(HMODULE hModule)
     g_addressBegin = reinterpret_cast<UINT64>(hModule);
     g_sizeOfCode = g_addressBegin + ntHeader->OptionalHeader.SizeOfCode;
     g_sizeOfImage = ntHeader->OptionalHeader.SizeOfImage;
-
-    printf("g_addressBegin: %" PRIu64 " \n", g_addressBegin);
 }
 
 bool CompareMemory(const UINT64 uAddress, const PBYTE bMask, const char* sMask)
